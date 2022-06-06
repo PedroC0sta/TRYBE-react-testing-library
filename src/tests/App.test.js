@@ -22,6 +22,6 @@ test('if has nav link', () => {
 
   history.push('/qualquercoisa');
   const headingPageNotFound = screen.getByRole('heading',
-    { name: /Page requested not found/i });
+    { name: /Page requested not found/i, level: 2 });
   expect(headingPageNotFound).toBeInTheDocument();
 });
